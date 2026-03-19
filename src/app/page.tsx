@@ -1,66 +1,62 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import LiquidImage from "@/components/LiquidImage";
+// import SemicircleBg from "@/components/SemicircleBg";
+import InteractiveName from "@/components/InteractiveName";
+import HeroDoodles from "@/components/HeroDoodles";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="min-h-[calc(100vh-24px)] flex flex-col cursor-pointer relative bg-white overflow-x-hidden font-sans text-[#111]">
+      <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 md:px-12 relative z-50 gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-md overflow-hidden bg-[#ea5b25]">
+            <Image src="/avatar.png" alt="Danil" width={32} height={32} className="object-cover" />
+          </div>
+          <span className="font-medium text-base">Priyanshu Ojha</span>
+        </div>
+        <div className="flex items-center gap-4 md:gap-8">
+          <a href="#" className="text-[#888] text-sm hover:text-[#111] transition-colors">About</a>
+          <a href="#" className="text-[#888] text-sm hover:text-[#111] transition-colors">Skills</a>
+          <a href="#" className="text-[#888] text-sm hover:text-[#111] transition-colors">Experience</a>
+          <a href="#" className="text-[#888] text-sm hover:text-[#111] transition-colors">Projects</a>
+          <button className="bg-[#ea5b25] text-white border-none py-2 px-4 rounded-lg text-sm font-medium cursor-pointer flex items-center gap-2 hover:opacity-90 transition-opacity">Contact</button>
+        </div>
+      </nav>
+
+      <main className="flex-1 flex justify-center items-center relative overflow-hidden min-h-[80vh]">
+        {/* <SemicircleBg /> */}
+        {/* <HeroDoodles /> */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center flex flex-col gap-[0px] whitespace-nowrap pointer-events-none select-none z-10">
+          <div className="marqueeLeft">
+            <div className="text-[clamp(2rem,7vw,6rem)] font-semibold text-black/20 tracking-tighter pr-5">CREATE SHIP REPEAT CREATE SHIP REPEAT CREATE SHIP REPEAT CREATE SHIP REPEAT&nbsp;</div>
+            <div className="text-[clamp(2rem,7vw,6rem)] font-semibold text-black/20 tracking-tighter pr-5">CREATE SHIP REPEAT CREATE SHIP REPEAT CREATE SHIP REPEAT CREATE SHIP REPEAT&nbsp;</div>
+          </div>
+          <div className="marqueeRight">
+            <div className="text-[clamp(2rem,7vw,6rem)] font-bold text-[#111] tracking-tighter pr-5">CHAOS BUILD SYSTEMS NOT CHAOS BUILD SYSTEMS NOT CHAOS BUILD SYSTEMS NOT CHAOS&nbsp;</div>
+            <div className="text-[clamp(2rem,7vw,6rem)] font-bold text-[#111] tracking-tighter pr-5">CHAOS BUILD SYSTEMS NOT CHAOS BUILD SYSTEMS NOT CHAOS BUILD SYSTEMS NOT CHAOS&nbsp;</div>
+          </div>
+        </div>
+        
+        <LiquidImage 
+          src="/hero_transparent.png" 
+          alt="Hero representation" 
+          className="relative w-[min(80vw,700px)] h-[calc(min(80vw,700px))] z-20 mt-auto self-end cursor-crosshair"
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
       </main>
+
+      {/* Interactive Name Section */}
+      <InteractiveName />
+      
+      {/* Skills Section */}
+      <Skills />
+      {/* Experience Section */}
+      <Experience />
+
+      {/* Projects Section */}
+      <Projects />
     </div>
   );
 }
