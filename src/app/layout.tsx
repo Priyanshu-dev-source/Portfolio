@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import CursorTrail from "@/components/CursorTrail";
+import CursorTrail from "@/components/CursorTrail";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({
       </head>
           
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* <CursorTrail /> */}
+        <CursorTrail />
         {children}
       </body>
     </html>

@@ -1115,10 +1115,10 @@ export default function Skills() {
           <h2 className="text-[2.5rem] md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
             My Technical <br />
             <span className="font-bold text-[#ea5b25]">
-              Background Skills and
+              Background Skills
             </span>
             <br />
-            <span className="font-bold text-[#ea5b25]">Accomplishments</span>
+            {/* <span className="font-bold text-[#ea5b25]">Accomplishments</span> */}
           </h2>
         </div>
         {/* <div className="w-full md:w-2/5 flex items-center pt-2 md:pt-4">
