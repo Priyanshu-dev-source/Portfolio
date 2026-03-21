@@ -7,83 +7,91 @@ const projectsData = [
   {
     id: 1,
     number: "1",
-    title: "E-Commerce Reimagined",
-    subtitle: "Global Market",
-    description: "A fully responsive, high-converting e-commerce platform built with Next.js, Tailwind CSS, and Stripe integration. It features seamless checkouts, real-time inventory management, and an intuitive dashboard for sellers.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Wegyanik",
+    subtitle: "E-Commerce Platform",
+    description: "Wegyanik is an e-commerce platform where users can buy products while also showcasing their own projects. It allows users to explore courses, attend workshops, and gain the knowledge needed to build real-world projects. The platform combines learning and shopping into a single ecosystem. It is a full-stack, user-focused application.",
+    image: "/wegyanik.png",
+    video: "/wegyanik.mp4",
+    videoResolution: false,
+    liveLink: "https://wegyanik.in/",
   },
   {
     id: 2,
     number: "2",
-    title: "AI Prompt Generator",
-    subtitle: "SaaS Application",
-    description: "An intuitive SaaS application leveraging OpenAI's API to help writers brainstorm creative prompts. It includes advanced filtering, favoriting, and a community hub for sharing prompts.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Vi Meet",
+    subtitle: "Video Conferencing and Chat Platform",
+    description: "Vi Meet is a real-time video conferencing platform that enables seamless communication through video and audio calls. It allows users to create or join meetings using a room code, making collaboration simple and efficient. The platform focuses on smooth connectivity, user-friendly design, and real-time interaction. It reflects my skills in building scalable, full-stack communication applications.",
+    image: "/vimeet.ico",
+    video: "/vimeet.mp4",
+    videoResolution: false,
+    liveLink: "https://vi-meet-app.vercel.app/",
   },
   {
     id: 3,
     number: "3",
-    title: "Real-time Chat",
-    subtitle: "Internal Tool",
-    description: "A fast, scalable internal communication tool featuring real-time socket connections, message history, multimedia sharing, and encrypted channels for teams to collaborate securely.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Rail Disha",
+    subtitle: "Smart Navigation App",
+    description: "Rail Disha is a smart navigation app designed to help users find their way across large railway stations with ease. It uses Bluetooth Low Energy (BLE) technology for indoor positioning to guide users to the correct platform or destination. The app provides real-time directions and improves convenience in crowded stations. It shows to build practical, tech-driven solutions for real-world problems.",
+    image: "/raildisha.png",
+    videoResolution: true,
+    video: "/raildisha.mp4",
   },
   {
     id: 4,
     number: "4",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Vyomnauts",
+    subtitle: "Informational Website",
+    description: "I developed a dashboard and informational website for our college club Vyomnoutes, focused primarily on frontend design and user experience. It showcases the club’s activities, events, and key information in a structured and engaging way. The website ensures easy navigation and a clean interface for users. It reflects my skills in building responsive and visually appealing web applications.",
+    image: "/vyomnauts.png",
+    video: "/vyomnauts.mp4",
+    liveLink: "https://vyomnautspsit.vercel.app/",
   },
   {
     id: 5,
     number: "5",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Authscan",
+    subtitle: "Blockchain Certificate Verification",
+    description: "AuthScan is a web application designed to verify the authenticity of certificates issued to users and industries. It leverages blockchain technology to ensure secure, tamper-proof validation of credentials. The platform enables reliable and transparent verification processes. It ensures trust and integrity in digital certification systems.",
+    image: "/authscan.png",
+    video: "/authscan.mp4",
   },
   {
     id: 6,
     number: "6",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Bus Buddy",
+    subtitle: "Real-time Bus Tracking System",
+    description: "Bus Buddy is a real-time bus tracking system that uses IoT devices to provide live location updates. It helps users track buses accurately, ensuring faster and smoother transportation. The system improves convenience and reduces waiting time with reliable tracking.",
+    image: "/busbuddy.png",
+    video: "/busbuddy.mp4",
   },
   {
     id: 7,
     number: "7",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Afri Build",
+    subtitle: "Smart Infrastructure Planning",
+    description: "Afri Build is a platform where users can select locations on a map and propose infrastructure based on their needs. Others can view and upvote these suggestions, highlighting demand within the community. The data can then be used by authorities to make informed decisions for public development. It encourages community-driven planning for better urban infrastructure.",
+    image: "/afribuild.png",
+    video: "/afribuild.mp4",
+    liveLink: "https://afribuild.vercel.app/",
   },
   {
     id: 8,
     number: "8",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Med Buddy",
+    subtitle: "Digital Healthcare Hub",
+    description: "Med Buddy is an online healthcare platform where users and doctors can register and connect for real-time appointments. It allows patients to consult doctors, receive medical suggestions, and access emergency ambulance support. The platform streamlines healthcare access with quick and reliable services.",
+    image: "/medbuddy2.jpg",
+    video: "/medbuddy.mp4",
   },
   {
     id: 9,
     number: "9",
-    title: "Automated Booking",
-    subtitle: "Healthcare System",
-    description: "A comprehensive booking management software designed for local clinics to manage patient appointments. Includes SMS reminders, custom calendar views, and native mobile integrations.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    title: "Weather Net",
+    subtitle: "Real-Time Weather Platform",
+    description: "WeatherNet is a web application that fetches real-time weather data using APIs to display current conditions of any location. It provides accurate and up-to-date information like temperature, humidity, and forecasts. The platform ensures a simple and clean interface for quick weather insights.",
+    image: "/weathernet.png",
+    video: "/weathernet.mp4",
+    liveLink: "https://weathernet.vercel.app/",
   },
 ];
 
@@ -94,7 +102,7 @@ export default function Projects() {
   const closeModal = () => setSelectedProject(null);
 
   return (
-    <section className="relative w-full bg-transparent font-sans overflow-hidden py-16 md:px-26">
+    <section id="projects" className="relative w-full bg-transparent font-sans overflow-hidden py-16 md:px-26">
       
       {/* Header */}
       {/* <div className="px-8 md:px-16 mb-12">
@@ -144,7 +152,7 @@ export default function Projects() {
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
+                className="w-full h-full object-contain bg-white p-8 scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
               />
               <div className="absolute inset-0 bg-black/50 transition-opacity duration-700"></div>
             </div>
@@ -207,7 +215,7 @@ export default function Projects() {
                 loop 
                 muted 
                 playsInline 
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"}`}
               />
               
               {/* Enlarge Button */}
@@ -220,7 +228,7 @@ export default function Projects() {
                     else if ((video as any).msRequestFullscreen) (video as any).msRequestFullscreen();
                   }
                 }}
-                className="absolute top-6 left-6 z-30 p-2.5 bg-black/40 hover:bg-[#ea5b25] text-white rounded-full transition-all duration-300 backdrop-blur-md opacity-0 group-hover/video:opacity-100 shadow-lg"
+                className="absolute top-6 left-6 z-30 p-2.5 bg-black/40 hover:bg-[#ea5b25] text-white rounded-full transition-all duration-300 backdrop-blur-md opacity-0 opacity-100 shadow-lg"
                 title="Enlarge Video"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -232,7 +240,7 @@ export default function Projects() {
               </button>
               
               {/* Blurry fade out at bottom of video overlapping with content */}
-              <div className="absolute inset-x-0 bottom-0 h-40 md:h-56 pointer-events-none">
+              <div className="absolute inset-x-0 bottom-0 h-40 md:h-36 pointer-events-none">
                 <div 
                   className="absolute inset-0 backdrop-blur-[12px]"
                   style={{ 
@@ -254,12 +262,28 @@ export default function Projects() {
                    {selectedProject.subtitle}
                  </p>
                  
-                 <p className="text-gray-700 text-lg md:text-xl leading-relaxed whitespace-pre-wrap font-medium">
+                 <p className="text-gray-700 text-lg md:text-[16px] leading-relaxed whitespace-pre-wrap font-medium">
                    {selectedProject.description}
                  </p>
                  
+                 {selectedProject.liveLink && (
+                   <a 
+                     href={selectedProject.liveLink}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center justify-center gap-3 mt-8 px-5 py-3 bg-[#ea5b25] hover:bg-[#d4481c] text-white font-semibold rounded-[10px] transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
+                   >
+                     View Live Project
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                       <polyline points="15 3 21 3 21 9"></polyline>
+                       <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                   </a>
+                 )}
+
                  {/* Decorative element to tie in theme */}
-                 <div className="mt-12 w-12 h-1 bg-[#ea5b25] rounded-full"></div>
+                 {/* <div className="mt-12 w-12 h-1 bg-[#ea5b25] rounded-full"></div> */}
               </div>
             </div>
 

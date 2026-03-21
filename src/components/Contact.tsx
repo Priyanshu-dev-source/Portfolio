@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ export default function Contact() {
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -18,31 +19,79 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
+    setError(false);
 
-    // Build mailto link to send email directly
-    const subject = encodeURIComponent(
-      `Portfolio Contact from ${formData.name}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
-    );
-    const mailtoLink = `mailto:priyanojha14@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY, // Replace with your key from https://web3forms.com
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Contact from ${formData.name}`,
+          from_name: "Portfolio Website",
+        }),
+      });
 
-    window.location.href = mailtoLink;
+      const result = await response.json();
 
-    setTimeout(() => {
+      if (result.success) {
+        setSent(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        setError(true);
+        setTimeout(() => setError(false), 4000);
+      }
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+    } finally {
       setSending(false);
-      setSent(true);
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setSent(false), 4000);
-    }, 800);
+    }
   };
 
   return (
     <>
+      {/* ── Toast Popups ── */}
+      <AnimatePresence>
+        {sent && (
+          <motion.div
+            initial={{ y: -80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -80, opacity: 0 }}
+            transition={{ type: "spring", damping: 18, stiffness: 140 }}
+            className="fixed top-6 left-1/2 -translate-x-1/2 z-[200] flex items-center gap-3 px-6 py-4 rounded-2xl bg-green-500 text-white font-semibold text-[15px] shadow-[0_12px_40px_rgba(34,197,94,0.4)]"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+            Message sent successfully!
+          </motion.div>
+        )}
+        {error && (
+          <motion.div
+            initial={{ y: -80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -80, opacity: 0 }}
+            transition={{ type: "spring", damping: 18, stiffness: 140 }}
+            className="fixed top-6 left-1/2 -translate-x-1/2 z-[200] flex items-center gap-3 px-6 py-4 rounded-2xl bg-red-500 text-white font-semibold text-[15px] shadow-[0_12px_40px_rgba(239,68,68,0.4)]"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="15" y1="9" x2="9" y2="15" />
+              <line x1="9" y1="9" x2="15" y2="15" />
+            </svg>
+            Failed to send. Please try again.
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <section id="contact" className="relative font-sans bg-gray-200 pb-0">
         {/* The Absolute Wrapper for the overlapping form card */}
         <div className="hidden lg:block absolute top-0 bottom-0 left-0 right-0 z-30 pointer-events-none">
@@ -132,7 +181,7 @@ export default function Contact() {
                   disabled={sending || sent}
                   className="w-full py-4 mt-2 bg-[#ea5b25] hover:bg-[#d04e1c] text-white font-bold text-[17px] rounded-full transition-all shadow-[0_8px_16px_rgba(234,91,37,0.25)] active:scale-[0.98]"
                 >
-                  {sent ? "Sent!" : sending ? "opening mail..." : "Send"}
+                  {sent ? "Sent!" : sending ? "Sending" : "Send"}
                 </button>
               </form>
             </motion.div>
@@ -421,7 +470,7 @@ export default function Contact() {
                 disabled={sending || sent}
                 className="w-full py-4 mt-2 bg-[#ea5b25] text-white font-bold text-[17px] rounded-full transition-all shadow-[0_8px_16px_rgba(234,91,37,0.25)]"
               >
-                {sent ? "Sent!" : sending ? "opening mail..." : "Send"}
+                {sent ? "Sent!" : sending ? "Sending" : "Send"}
               </button>
             </form>
           </div>

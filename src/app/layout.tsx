@@ -18,13 +18,15 @@ export const metadata: Metadata = {
   description: "Portfolio website",
 };
 
+import BottomDock from "@/components/BottomDock";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
             <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
@@ -32,6 +34,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CursorTrail />
         {children}
+        <BottomDock />
       </body>
     </html>
   );

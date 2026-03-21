@@ -1109,7 +1109,7 @@ export default function Skills() {
     ) || toolsData[0];
 
   return (
-    <section className="relative w-full py-20 bg-transparent font-sans text-[#111] overflow-hidden">
+    <section id="skills" className="relative w-full py-20 bg-transparent font-sans text-[#111] overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-8 mb-5">
         <motion.div 
@@ -1203,7 +1203,7 @@ Here’s a quick dive into the section that highlights the tools and strengths b
 
         {/* Right Column Stats */}
         <div className="flex flex-col gap-6 md:gap-8 justify-center">
-          <div className="w-full">
+          {/* <div className="w-full">
             <div className="flex justify-between items-end mb-3">
               <span className="font-semibold text-lg">Proficiency</span>
               <span className="font-bold text-lg">
@@ -1218,10 +1218,10 @@ Here’s a quick dive into the section that highlights the tools and strengths b
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-white border-[2.5px] border-[#ea5b25] rounded-full shadow-sm z-10"></div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="flex flex-col gap-4">
-            <h4 className="font-bold text-lg text-[#111]">Projects Used In:</h4>
+          <div className="flex flex-col gap-4 pb-[35px]">
+            <h4 className="font-bold text-[22px] text-[#111]">Projects Used In:</h4>
             <ul className="space-y-4">
               {activeTool.stats.right.projects.map((project, i) => (
                 <motion.li

@@ -20,10 +20,17 @@ const experienceData = [
   },
   {
     id: 3,
+    role: "Head GCS Developer",
+    company: "ASI–ISRO Rocketry Competition",
+    date: "Oct 2025",
+    type: "Team Member",
+  },
+  {
+    id: 4,
     role: "Head Developer",
     company: "Vyomnauts Club",
-    date: "2025-2026",
-    // type: "Internship",
+    date: "2024-2025",
+    type: "Team Member",
   },
 ];
 
@@ -31,7 +38,7 @@ export default function Experience() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section className="relative w-full py-20 bg-gray-200 font-sans text-gray-900 overflow-hidden">
+    <section id="experience" className="relative w-full py-20 bg-gray-200 font-sans text-gray-900 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col z-10">
         
         {/* Header */}

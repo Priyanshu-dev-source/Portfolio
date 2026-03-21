@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function InteractiveName() {
   return (
-    <div className="relative w-full min-h-[90vh] bg-gray-200 flex justify-center items-center overflow-hidden py-16 md:py-24 font-sans border-t border-gray-100">
+    <div id="about" className="relative w-full min-h-[90vh] bg-gray-200 flex justify-center items-center overflow-hidden py-16 md:py-24 font-sans border-t border-gray-100">
       
       {/* Decorative Corner Blobs */}
       <div className="absolute top-[-5%] left-[-5%] w-[400px] h-[300px] bg-[#ea5b25] rounded-br-full z-0 opacity-90 hidden md:block"></div>

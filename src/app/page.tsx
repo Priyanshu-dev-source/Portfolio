@@ -28,25 +28,25 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4 md:gap-8">
           <a
-            href="#"
+            href="#about"
             className="text-[#888] text-sm hover:text-[#111] transition-colors"
           >
             About
           </a>
           <a
-            href="#"
+            href="#skills"
             className="text-[#888] text-sm hover:text-[#111] transition-colors"
           >
             Skills
           </a>
           <a
-            href="#"
+            href="#experience"
             className="text-[#888] text-sm hover:text-[#111] transition-colors"
           >
             Experience
           </a>
           <a
-            href="#"
+            href="#projects"
             className="text-[#888] text-sm hover:text-[#111] transition-colors"
           >
             Projects
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         <LiquidImage
-          src="/Adobe Express - file.png"
+          src="/Adobe Express - file.webp"
           alt="Hero representation"
           className="relative w-[min(80vw,700px)] h-[calc(min(80vw,700px))] z-20 mt-auto self-end cursor-pointer"
         />
