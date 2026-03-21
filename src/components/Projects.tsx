@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const projectsData = [
   {
@@ -93,7 +94,7 @@ export default function Projects() {
   const closeModal = () => setSelectedProject(null);
 
   return (
-    <section className="relative w-full bg-white font-sans overflow-hidden py-16 md:px-26">
+    <section className="relative w-full bg-transparent font-sans overflow-hidden py-16 md:px-26">
       
       {/* Header */}
       {/* <div className="px-8 md:px-16 mb-12">
@@ -102,14 +103,20 @@ export default function Projects() {
          </h2>
       </div> */}
 
-      <div className="mb-12 text-left px-8 md:px-16">
+      <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12 text-left px-8 md:px-16"
+        >
           <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-semibold tracking-tight text-gray-900 leading-tight mb-4">
             My <span className="font-bold text-[#ea5b25]">Projects</span>
           </h2>
           <p className="text-gray-600 font-lighter text-lg md:text-[18px] max-w-2xl leading-relaxed">
             A showcase of my work where ideas come to life through creativity, code, and problem-solving.
           </p>
-        </div>
+        </motion.div>
 
       {/* Projects Grid/Flex Layout */}
       <div className="grid grid-cols-1 md:grid-cols-5 w-full min-h-[500px] md:min-h-[450px]">
@@ -119,7 +126,11 @@ export default function Projects() {
           const hasCardBelowMd = idx + 5 < projectsData.length;
 
           return (
-          <div 
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, rotateY: 15, perspective: 1000 }}
+            whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ duration: 0.6, delay: (idx % 5) * 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
             key={project.id}
             onClick={() => setSelectedProject(project)}
             className={`group relative flex flex-col justify-between p-8 md:p-10 cursor-pointer transition-colors duration-500 overflow-hidden border-gray-200 md:border-r ${
@@ -161,7 +172,7 @@ export default function Projects() {
                 </svg>
               </div>
             </div>
-          </div>
+          </motion.div>
         );
         })}
       </div>

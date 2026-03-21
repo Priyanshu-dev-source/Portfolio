@@ -7,10 +7,12 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import GlobalLiquidBackground from "@/components/GlobalLiquidBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-[calc(100vh-24px)] flex flex-col cursor-pointer relative bg-white overflow-x-hidden font-sans text-[#111]">
+    <div className="min-h-[calc(100vh-24px)] flex flex-col cursor-pointer relative bg-transparent overflow-x-hidden font-sans text-[#111]">
+      <GlobalLiquidBackground />
       <nav className="flex flex-wrap justify-between items-center p-4 md:p-6 md:px-12 relative z-50 gap-4">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-md overflow-hidden bg-[#ea5b25]">
@@ -82,9 +84,9 @@ export default function Home() {
         </div>
 
         <LiquidImage
-          src="/hero_transparent.png"
+          src="/Adobe Express - file.png"
           alt="Hero representation"
-          className="relative w-[min(80vw,700px)] h-[calc(min(80vw,700px))] z-20 mt-auto self-end cursor-crosshair"
+          className="relative w-[min(80vw,700px)] h-[calc(min(80vw,700px))] z-20 mt-auto self-end cursor-pointer"
         />
       </main>
 

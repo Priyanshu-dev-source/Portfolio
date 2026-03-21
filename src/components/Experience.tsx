@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const experienceData = [
   {
@@ -34,24 +35,34 @@ export default function Experience() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col z-10">
         
         {/* Header */}
-        <div className="mb-12 text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12 text-left"
+        >
           <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-semibold tracking-tight text-gray-900 leading-tight mb-4">
             My <span className="font-bold text-[#ea5b25]">Experience</span>
           </h2>
           <p className="text-gray-600 font-lighter text-lg md:text-[18px] max-w-2xl leading-relaxed">
             A glimpse into my journey of turning knowledge into real-world projects and impactful solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Content Area */}
         <div className="w-full">
           <div className="w-full relative border-l-2 border-[#ea5b25]/20 pl-8 md:pl-12 py-2">
             <div className="flex flex-col gap-6">
-              {experienceData.map((exp) => {
+              {experienceData.map((exp, index) => {
                 const isActive = activeId === exp.id;
 
                 return (
-                  <div 
+                  <motion.div 
+                    initial={{ opacity: 0, x: -30, rotateX: 10, perspective: 1000 }}
+                    whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     key={exp.id} 
                     className="relative group cursor-pointer"
                     onClick={() => setActiveId(exp.id)}
@@ -94,7 +105,7 @@ export default function Experience() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
