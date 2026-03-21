@@ -97,9 +97,13 @@ const projectsData = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   // Close modal when clicking outside
-  const closeModal = () => setSelectedProject(null);
+  const closeModal = () => {
+    setSelectedProject(null);
+    setVideoLoaded(false);
+  };
 
   return (
     <section id="projects" className="relative w-full bg-transparent font-sans overflow-hidden py-16 md:px-26">
@@ -208,14 +212,24 @@ export default function Projects() {
             </button>
 
             {/* Video Header area */}
-            <div className="relative w-full h-[250px] md:h-[400px] flex-shrink-0 group/video">
+            <div className="relative w-full h-[250px] md:h-[400px] flex-shrink-0 group/video bg-gray-900">
+              {/* Loading Spinner */}
+              {!videoLoaded && (
+                <div className="absolute inset-0 z-20 flex items-center justify-center bg-gray-900">
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-10 h-10 border-3 border-white/20 border-t-[#ea5b25] rounded-full animate-spin"></div>
+                    <span className="text-white/60 text-sm font-medium">Loading video...</span>
+                  </div>
+                </div>
+              )}
               <video 
                 src={selectedProject.video} 
                 autoPlay 
                 loop 
                 muted 
                 playsInline 
-                className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"}`}
+                onCanPlayThrough={() => setVideoLoaded(true)}
+                className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"} ${!videoLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
               />
               
               {/* Enlarge Button */}

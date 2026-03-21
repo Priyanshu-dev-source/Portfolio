@@ -6,13 +6,10 @@ import { motion } from "framer-motion";
 export default function BottomDock() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
-  // On mount: read saved preference or system preference
+  // On mount: read saved preference (default to light)
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = saved === "dark" || (!saved && prefersDark);
-
-    if (isDark) {
+    if (saved === "dark") {
       document.documentElement.classList.add("dark");
       setTheme("dark");
     } else {
