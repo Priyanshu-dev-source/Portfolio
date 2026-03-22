@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function InteractiveName() {
   return (
-    <div id="about" className="relative w-full min-h-[90vh] bg-gray-200 flex justify-center items-center overflow-hidden py-16 md:py-24 font-sans border-t border-gray-100">
+    <div id="about" className="relative w-full min-h-[70vh] md:min-h-[90vh] bg-gray-200 flex justify-center items-center overflow-hidden py-12 md:py-24 font-sans border-t border-gray-100">
       
       {/* Decorative Corner Blobs */}
-      <div className="absolute top-[-5%] left-[-5%] w-[400px] h-[300px] bg-[#ea5b25] rounded-br-full z-0 opacity-90 hidden md:block"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[460px] h-[350px] bg-[#ea5b25] rounded-tl-[300px] z-0 opacity-90 hidden md:block"></div>
+      <div className="absolute top-[-5%] left-[-5%] w-[350px] h-[250px] bg-[#ea5b25] rounded-br-full z-0 opacity-90 hidden md:block"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[300px] bg-[#ea5b25] rounded-tl-[300px] z-0 opacity-90 hidden md:block"></div>
 
       {/* Container */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto px-6 md:px-12 gap-12 md:gap-8">
@@ -20,15 +20,15 @@ export default function InteractiveName() {
           whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative w-full md:w-1/2 flex justify-center items-end min-h-[500px] md:min-h-[600px] mt-10 md:mt-0"
+          className="relative w-full md:w-1/2 flex justify-center items-end min-h-[350px] sm:min-h-[450px] md:min-h-[600px] mt-6 md:mt-0"
         >
           
           {/* Background Shapes */}
           {/* Small Navy Block (Left) */}
-          <div className="absolute left-[-6%] bottom-[10%] w-[60%] h-[30%] bg-[#0B1021] z-0 rounded-md hidden md:block"></div>
+          <div className="absolute left-[-6%] bottom-[10%] w-[60%] h-[30%] bg-[#0B1021] dark:bg-white/10 z-0 rounded-md hidden md:block"></div>
 
           {/* Large Vertical Navy Block */}
-          <div className="absolute left-[35%] bottom-[10%] w-[45%] h-[80%] bg-[#0B1021] z-0 rounded-md"></div>
+          <div className="absolute left-[35%] bottom-[10%] w-[45%] h-[80%] bg-[#0B1021] dark:bg-white/10 z-0 rounded-md"></div>
           
           {/* Big Orange Circle */}
           <div className="absolute left-[8%] bottom-[15%] w-[65%] aspect-square rounded-full bg-[#ea5b25] z-0 shadow-lg"></div>
@@ -37,7 +37,7 @@ export default function InteractiveName() {
           {/* <div className="absolute left-[20%] top-[40%] w-[10%] h-[15%] bg-[#0B1021] z-0 hidden md:block rounded-md"></div> */}
 
           {/* Person Image */}
-          <div className="relative z-20 w-[85%] max-w-[450px] aspect-[3/4] bottom-[20px] right-[60px] origin-bottom transform transition-transform duration-500">
+          <div className="relative z-20 w-[70%] sm:w-[85%] max-w-[450px] aspect-[3/4] bottom-[20px] right-0 md:right-[60px] origin-bottom transform transition-transform duration-500">
             <Image 
               src="/newAvatar.png" 
               alt="Person" 

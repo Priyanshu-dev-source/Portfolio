@@ -92,7 +92,7 @@ export default function Contact() {
         )}
       </AnimatePresence>
 
-      <section id="contact" className="relative font-sans bg-gray-200 pb-0">
+      <section id="contact" className="relative font-sans bg-white pb-0">
         {/* The Absolute Wrapper for the overlapping form card */}
         <div className="hidden lg:block absolute top-0 bottom-0 left-0 right-0 z-30 pointer-events-none">
           <div className="h-full max-w-7xl mx-auto px-6 md:px-12 flex justify-end pt-12">
@@ -101,7 +101,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="w-[450px] bg-white rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-t-[4px] border-[#ea5b25] p-10 pointer-events-auto h-fit mt-12"
+              className="w-[450px] bg-gray-200 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-t-[4px] border-[#ea5b25] p-10 pointer-events-auto h-fit mt-12"
             >
               <h3 className="text-[28px] font-bold text-gray-900 mb-8 tracking-tight">
                 Message

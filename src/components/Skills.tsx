@@ -74,9 +74,8 @@ const toolsData = [
       right: {
         proficiency: 90,
         projects: [
-          "E-Commerce Dashboard",
-          "Portfolio Website",
-          "SaaS Platform Redesign",
+          "Authscan",
+          "Med Buddy",
         ],
       },
     },
@@ -106,9 +105,14 @@ const toolsData = [
       right: {
         proficiency: 85,
         projects: [
-          "Creative Agency Site",
-          "Marketing Landing Pages",
-          "Local Business Portal",
+          "Wegyanik",
+          "Vi Meet",
+          "Authscan",
+          "Vyomnauts",
+          "Afri Build",
+          "Med Buddy",
+          "Bus Buddy",
+          "Weather Neta",
         ],
       },
     },
@@ -138,9 +142,8 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Vi Meet",
+          "Authscan"
         ],
       },
     },
@@ -178,9 +181,7 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Authscan"
         ],
       },
     },
@@ -215,9 +216,7 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Authscan"
         ],
       },
     },
@@ -309,9 +308,12 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Authscan",
+          "Med Buddy",
+          "Wegyanik",
+          "Vi Meet",
+          "Afri Build",
+          "Bus Buddy",
         ],
       },
     },
@@ -342,9 +344,8 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Authscan",
+          "Bus Buddy"
         ],
       },
     },
@@ -375,9 +376,9 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Med Buddy",
+          "Vi Meet",
+          "Vyomnauts"
         ],
       },
     },
@@ -405,9 +406,10 @@ const toolsData = [
       right: {
         proficiency: 80,
         projects: [
-          "Interactive Product Showcase",
-          "Animated Personal Blog",
-          "Startup Teaser Page",
+          "Wegyanik",
+          "Authscan",
+          "Afri Build",
+          "Bus Buddy",
         ],
       },
     },
@@ -449,9 +451,8 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Vi Meet",
+          "DSA"
         ],
       },
     },
@@ -495,9 +496,7 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Weather Net"
         ],
       },
     },
@@ -528,9 +527,11 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik",
+          "Authscan",
+          "Afri Build",
+          "Bus Buddy",
+          "Vyomnauts"
         ],
       },
     },
@@ -583,9 +584,10 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Vi Meet",
+          "Med Buddy",
+          "Weather Net",
+          "Rail Disha"
         ],
       },
     },
@@ -616,9 +618,7 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Rail Disha"
         ],
       },
     },
@@ -655,9 +655,9 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik",
+          "Authscan",
+          "Afri Build"
         ],
       },
     },
@@ -780,9 +780,10 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Rail Disha",
+          "Bus Buddy",
+          "Med Buddy",
+
         ],
       },
     },
@@ -840,9 +841,7 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik"
         ],
       },
     },
@@ -873,9 +872,8 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik",
+          
         ],
       },
     },
@@ -910,9 +908,7 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Vi Meet"
         ],
       },
     },
@@ -947,9 +943,7 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "All Projects"
         ],
       },
     },
@@ -990,9 +984,13 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik",
+          "Authscan",
+          "Afri Build",
+          "Rail Disha",
+          "Bus Buddy",
+          "Med Buddy",
+          "Weather Net"
         ],
       },
     },
@@ -1040,9 +1038,39 @@ const toolsData = [
       right: {
         proficiency: 95,
         projects: [
-          "Real-time Chat App",
-          "Admin Management System",
-          "Automated Booking Service",
+          "Wegyanik",
+          "Vyomnauts",
+          "Bus Buddy"
+        ],
+      },
+    },
+  },
+  {
+    id: "Firebase",
+    logo: (
+      
+            <svg
+              width="80"
+              height="80"
+              className="w-[80px] h-[80px]"
+              viewBox="0 0 128 128"
+            >
+      {/* <svg viewBox="0 0 128 128"> */}
+            <path fill="#ffa000" d="M17.474 103.276 33.229 2.462a2.91 2.91 0 0 1 5.44-.924l16.294 30.39 6.494-12.366a2.91 2.91 0 0 1 5.15 0l43.97 83.714H17.474Z"></path><path fill="#f57c00" d="M71.903 64.005 54.955 31.913l-37.481 71.363Z"></path><path fill="#ffca28" d="M110.577 103.276 98.51 28.604a2.913 2.913 0 0 0-1.984-2.286 2.906 2.906 0 0 0-2.94.714l-76.112 76.243 42.115 23.618a8.728 8.728 0 0 0 8.51 0l42.478-23.618Z"></path><path fill="#fff" fill-opacity=".2" d="M98.51 28.604a2.913 2.913 0 0 0-1.984-2.286 2.906 2.906 0 0 0-2.94.713L78.479 42.178 66.6 19.562a2.91 2.91 0 0 0-5.15 0l-6.494 12.365L38.662 1.538A2.91 2.91 0 0 0 35.605.044a2.907 2.907 0 0 0-2.384 2.425L17.474 103.276h-.051l.05.058.415.204 75.676-75.764a2.91 2.91 0 0 1 4.932 1.571l11.965 74.003.116-.073L98.51 28.603Zm-80.898 74.534L33.228 3.182A2.91 2.91 0 0 1 35.613.756a2.911 2.911 0 0 1 3.057 1.495l16.292 30.39 6.495-12.366a2.91 2.91 0 0 1 5.15 0L78.245 42.41 17.61 103.138Z"></path><path fill="#a52714" d="M68.099 126.18a8.728 8.728 0 0 1-8.51 0l-42.015-23.55-.102.647 42.115 23.61a8.728 8.728 0 0 0 8.51 0l42.48-23.61-.11-.67-42.37 23.575z" opacity=".2"></path>
+            </svg>
+          
+    ),
+
+    stats: {
+      left: {
+        heading: "Firebase",
+        description:
+          "Firebase is a Backend-as-a-Service platform that helps developers build and scale apps quickly. It offers tools like real-time databases, authentication, and hosting, allowing you to focus more on frontend and user experience.",
+      },
+      right: {
+        proficiency: 95,
+        projects: [
+          "Vi Meet"
         ],
       },
     },
@@ -1222,7 +1250,7 @@ Here’s a quick dive into the section that highlights the tools and strengths b
 
           <div className="flex flex-col gap-4 pb-[35px]">
             <h4 className="font-bold text-[22px] text-[#111]">Projects Used In:</h4>
-            <ul className="space-y-4">
+            <ul className={`${activeTool.stats.right.projects.length > 3 ? 'grid grid-cols-2 gap-x-8 gap-y-4' : 'space-y-4'}`}>
               {activeTool.stats.right.projects.map((project, i) => (
                 <motion.li
                   key={i}

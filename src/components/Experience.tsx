@@ -38,7 +38,7 @@ export default function Experience() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section id="experience" className="relative w-full py-20 bg-gray-200 font-sans text-gray-900 overflow-hidden">
+    <section id="experience" className="relative w-full py-12 md:py-20 bg-gray-200 font-sans text-gray-900 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col z-10">
         
         {/* Header */}

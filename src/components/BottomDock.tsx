@@ -34,15 +34,15 @@ export default function BottomDock() {
     <motion.div
       initial={{ y: 100, opacity: 0, x: "-50%" }}
       animate={{ y: 0, opacity: 1, x: "-50%" }}
-      transition={{ type: "spring", damping: 20, stiffness: 100, delay: 0.5 }}
-      className="fixed bottom-6 left-1/2 z-[100] flex items-center gap-2 px-4 py-2 rounded-2xl bg-black/70 backdrop-blur-[8px] border border-white/10 shadow-[0_8px_40px_0_rgba(0,0,0,0.4)] transition-all duration-300"
+      transition={{ type: "spring", damping: 20, stiffness: 100, delay: 0.1 }}
+      className="fixed bottom-6 left-1/2 z-[100] flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 rounded-2xl bg-black/70 backdrop-blur-[8px] border border-white/10 shadow-[0_8px_40px_0_rgba(0,0,0,0.4)] transition-all duration-300 max-w-[92vw]"
     >
       {/* Resume Download Button */}
       <a
         href="/PriyanshuKumar.pdf"
         download="Priyanshu_Ojha_Resume.pdf"
         title="Download Resume"
-        className="group flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-[#ea5b25]/10 hover:scale-[1.04] transition-all duration-200 active:scale-95 text-white"
+        className="group flex items-center gap-2.5 px-3 sm:px-4 py-2.5 rounded-xl hover:bg-[#ea5b25]/10 hover:scale-[1.04] transition-all duration-200 active:scale-95 text-white"
       >
         <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#ea5b25]/10 group-hover:bg-[#ea5b25]/20 transition-colors">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ea5b25" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -51,19 +51,19 @@ export default function BottomDock() {
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
         </span>
-        <div className="flex flex-col leading-tight">
+        <div className="hidden sm:flex flex-col leading-tight">
           <span className="text-[11px] font-bold text-[#ea5b25]">Resume</span>
           <span className="text-[10px] text-gray-400 font-medium whitespace-nowrap">Download CV</span>
         </div>
       </a>
 
-      <div className="w-px h-10 bg-white/15 mx-1"></div>
+      <div className="w-px h-10 bg-white/15 mx-0.5 sm:mx-1"></div>
 
       {/* Theme Toggle Button */}
       <button
         onClick={toggleTheme}
         title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-        className="group flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-[1.04] transition-all duration-200 active:scale-95 text-white"
+        className="group flex items-center gap-2.5 px-3 sm:px-4 py-2.5 rounded-xl hover:bg-white/10 hover:scale-[1.04] transition-all duration-200 active:scale-95 text-white"
       >
         <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors">
           {theme === "light" ? (
@@ -84,7 +84,7 @@ export default function BottomDock() {
             </svg>
           )}
         </span>
-        <div className="flex flex-col leading-tight">
+        <div className="hidden sm:flex flex-col leading-tight">
           <span className="text-[11px] font-bold text-gray-200">
             {theme === "light" ? "Dark Mode" : "Light Mode"}
           </span>
@@ -94,7 +94,7 @@ export default function BottomDock() {
         </div>
       </button>
 
-      <div className="w-px h-10 bg-white/15 mx-1"></div>
+      <div className="w-px h-10 bg-white/15 mx-0.5 sm:mx-1"></div>
 
       {/* Spotify Blend Link Button */}
       <a
@@ -102,14 +102,14 @@ export default function BottomDock() {
         target="_blank"
         rel="noopener noreferrer"
         title="Blend with me on Spotify"
-        className="group flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-[#1DB954]/10 hover:scale-[1.04] transition-all duration-200 active:scale-95"
+        className="group flex items-center gap-2.5 px-3 sm:px-4 py-2.5 rounded-xl hover:bg-[#1DB954]/10 hover:scale-[1.04] transition-all duration-200 active:scale-95"
       >
         <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#1DB954]/10 group-hover:bg-[#1DB954]/20 transition-colors">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#1DB954" stroke="none">
             <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.394-.68.522-1.04.288-2.906-1.782-6.55-2.185-10.84-1.194-.43.1-.82-.16-.92-.59-.1-.43.16-.82.59-.92 4.67-1.08 8.65-.63 11.92 1.38.35.24.48.68.29 1.04zm1.43-3.13c-.30.49-.91.64-1.39.34-3.32-2.04-8.41-2.65-11.98-1.45-.55.19-1.14-.11-1.33-.66-.19-.55.11-1.14.66-1.33 4.14-1.38 9.87-.71 13.7 1.71.49.3.64.91.34 1.39zm.13-3.28c-3.95-2.35-10.45-2.57-14.21-1.42-.68.21-1.4-.18-1.61-.86-.21-.68.18-1.4.86-1.61 4.31-1.32 11.51-1.07 16.03 1.63.63.37.82 1.18.45 1.81-.37.63-1.18.82-1.81.45z"/>
           </svg>
         </span>
-        <div className="flex flex-col leading-tight">
+        <div className="hidden sm:flex flex-col leading-tight">
           <span className="text-[11px] font-bold text-[#1DB954]">Spotify</span>
           <span className="text-[10px] text-gray-400 font-medium whitespace-nowrap">Blend with me</span>
         </div>
