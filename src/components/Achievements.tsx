@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Achievement {
   id: number;
@@ -43,6 +44,11 @@ const achievementsData: Achievement[] = [
 ];
 
 export default function Achievements() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
   return (
     <section
       id="achievements"
@@ -83,10 +89,6 @@ export default function Achievements() {
             >
               {/* Text Side */}
               <div className="w-full md:w-[40%] flex flex-col justify-start items-start">
-                {/* Decorative number */}
-                {/* <span className="text-[6rem] md:text-[8rem] font-extralight leading-none text-[#ea5b25]/15 select-none -mb-6 md:mb-8">
-                  {String(achievement.id).padStart(2, "0")}
-                </span> */}
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                   {achievement.title}
                 </h3>
@@ -110,6 +112,12 @@ export default function Achievements() {
                       className={`${photo.span} relative rounded-2xl overflow-hidden group/photo cursor-pointer`}
                       whileHover={{ scale: 1.03 }}
                       transition={{ duration: 0.35, ease: "easeOut" }}
+                      onClick={() =>
+                        setSelectedImage({
+                          src: photo.src,
+                          alt: photo.alt,
+                        })
+                      }
                     >
                       {/* Image */}
                       <img
@@ -133,6 +141,69 @@ export default function Achievements() {
           );
         })}
       </div>
+
+      {/* Image Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              onClick={() => setSelectedImage(null)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-2.5 bg-black/40 hover:bg-[#ea5b25] text-white rounded-full transition-all duration-300 backdrop-blur-md"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image */}
+            <motion.img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="relative z-10 max-w-[90vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            />
+
+            {/* Caption */}
+            <motion.p
+              className="absolute bottom-6 sm:bottom-8 z-10 text-white/80 text-sm sm:text-base font-medium bg-black/40 px-4 py-2 rounded-full backdrop-blur-md"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              {selectedImage.alt}
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

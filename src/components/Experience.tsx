@@ -21,7 +21,7 @@ const experienceData = [
   {
     id: 3,
     role: "Head GCS Developer",
-    company: "ASI–ISRO Rocketry Competition",
+    company: "ASI–CANSAT Competition",
     date: "Oct 2025",
     type: "Team Member",
   },

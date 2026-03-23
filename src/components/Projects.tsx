@@ -235,7 +235,7 @@ export default function Projects() {
           ></div>
 
           {/* Modal Content container */}
-          <div className="relative w-full max-w-5xl h-[85vh] sm:h-[90vh] md:h-auto md:max-h-[90vh] bg-white rounded-2xl sm:rounded-3xl overflow-y-auto overflow-x-hidden shadow-2xl flex flex-col animate-in fade-in zoom-in duration-300 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="relative w-full max-w-5xl max-h-[85vh] sm:max-h-[90vh] md:max-h-[90vh] bg-white rounded-2xl sm:rounded-3xl overflow-y-auto overflow-x-hidden shadow-2xl flex flex-col animate-in fade-in zoom-in duration-300 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {/* Close Button */}
             <button
               onClick={closeModal}
@@ -257,25 +257,34 @@ export default function Projects() {
 
             {/* Video Header area */}
             <div className="relative w-full h-[180px] sm:h-[250px] md:h-[400px] flex-shrink-0 group/video bg-gray-900">
-              {/* Loading Spinner */}
+              {/* Poster image shown instantly while video loads */}
               {!videoLoaded && (
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-gray-900">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="w-10 h-10 border-3 border-white/20 border-t-[#ea5b25] rounded-full animate-spin"></div>
-                    <span className="text-white/60 text-sm font-medium">
-                      Loading video...
-                    </span>
+                <div className="absolute inset-0 z-20">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"} bg-gray-900`}
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-10 h-10 border-3 border-white/20 border-t-[#ea5b25] rounded-full animate-spin"></div>
+                      <span className="text-white/60 text-sm font-medium">
+                        Loading video...
+                      </span>
+                    </div>
                   </div>
                 </div>
               )}
               <video
                 src={selectedProject.video}
+                poster={selectedProject.image}
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 onCanPlayThrough={() => setVideoLoaded(true)}
-                className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"} ${!videoLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+                className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"} ${!videoLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}
               />
 
               {/* Enlarge Button */}
@@ -312,7 +321,7 @@ export default function Projects() {
               </button>
 
               {/* Blurry fade out at bottom of video overlapping with content */}
-              <div className="absolute inset-x-0 bottom-0 h-40 md:h-36 pointer-events-none">
+              <div className="absolute inset-x-0 bottom-0 md:h-36 pointer-events-none">
                 <div
                   className="absolute inset-0 backdrop-blur-[12px]"
                   style={{
@@ -327,7 +336,7 @@ export default function Projects() {
             </div>
 
             {/* Text Description area - using negative margin to pull under the blur */}
-            <div className="relative px-5 sm:px-8 md:px-16 pt-0 pb-8 sm:pb-12 -mt-16 sm:-mt-20 md:-mt-24 z-10 flex-grow">
+            <div className="relative px-5 sm:px-8 md:px-16 pt-0 pb-4 sm:pb-12 mt-6 sm:-mt-20 md:mt-24 z-10 flex-grow">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 drop-shadow-sm">
                   {selectedProject.title}
