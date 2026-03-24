@@ -336,7 +336,7 @@ export default function Projects() {
             </div>
 
             {/* Text Description area - using negative margin to pull under the blur */}
-            <div className="relative px-5 sm:px-8 md:px-16 pt-0 pb-4 sm:pb-12 mt-6 sm:-mt-20 md:mt-24 z-10 flex-grow">
+            <div className="relative px-5 sm:px-8 md:px-16 pt-0 pb-4 sm:pb-12 mt-6 sm:-mt-20 md:mt-0 z-10 flex-grow">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 drop-shadow-sm">
                   {selectedProject.title}
