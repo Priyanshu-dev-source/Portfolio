@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import CursorTrail from "@/components/CursorTrail";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
           
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Analytics/>
+        <SpeedInsights/>
         <CursorTrail />
         {children}
         <BottomDock />
