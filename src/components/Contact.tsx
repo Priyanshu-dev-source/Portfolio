@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
@@ -218,10 +219,13 @@ export default function Contact() {
         <div className="relative w-full overflow-hidden">
           {/* Background Image (Blurred photo) */}
           <div className="absolute inset-0 bg-gray-950">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&q=80"
               alt="Blurred background"
-              className="w-full h-full object-cover opacity-50 blur-sm mix-blend-luminosity hover:mix-blend-normal transition-all duration-[2000ms]"
+              fill
+              sizes="100vw"
+              loading="lazy"
+              className="object-cover opacity-50 blur-sm mix-blend-luminosity hover:mix-blend-normal transition-all duration-[2000ms]"
             />
             {/* Gradient overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>

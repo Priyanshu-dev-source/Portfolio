@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projectsData = [
@@ -180,10 +181,13 @@ export default function Projects() {
             >
               {/* Background Image (visible on hover) */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain bg-white p-8 scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 20vw"
+                  loading="lazy"
+                  className="object-contain bg-white p-8 scale-105 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
                 />
                 <div className="absolute inset-0 bg-black/50 transition-opacity duration-700"></div>
               </div>
@@ -260,10 +264,12 @@ export default function Projects() {
               {/* Poster image shown instantly while video loads */}
               {!videoLoaded && (
                 <div className="absolute inset-0 z-20">
-                  <img
+                  <Image
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className={`w-full h-full ${selectedProject.videoResolution ? "object-contain" : "object-cover"} bg-gray-900`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 960px"
+                    className={`${selectedProject.videoResolution ? "object-contain" : "object-cover"} bg-gray-900`}
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <div className="flex flex-col items-center gap-3">
