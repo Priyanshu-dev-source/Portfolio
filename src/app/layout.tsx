@@ -14,12 +14,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Priyanshu Ojha",
   description: "Portfolio website",
+  keywords: "Priyanshu Ojha, Priyanshu Kumar, Full Stack Developer, Frontend Developer, Backend Developer, React Developer, Next.js, Node.js, Web Developer, Kanpur",
+  authors: [{ name: "Priyanshu Ojha" }],
+  openGraph: {
+    title: "Priyanshu Ojha | Full Stack Developer",
+    description: "Full Stack Developer skilled in React, Next.js and Node.js.",
+    url: "https://www.priyanshuojha.in",
+    siteName: "Priyanshu Ojha Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Priyanshu Ojha | Full Stack Developer",
+    description: "Full Stack Developer skilled in React, Next.js and Node.js.",
+  },
 };
 
 import BottomDock from "@/components/BottomDock";
+
 
 export default function RootLayout({
   children,
