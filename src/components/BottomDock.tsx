@@ -39,7 +39,7 @@ export default function BottomDock() {
     >
       {/* Resume Download Button */}
       <a
-        href="/PriyanshuKumar.pdf"
+        href="/PriyanshuNewResume.pdf"
         download="Priyanshu_Ojha_Resume.pdf"
         title="Download Resume"
         className="group flex items-center gap-2.5 px-3 sm:px-4 py-2.5 rounded-xl hover:bg-[#ea5b25]/10 hover:scale-[1.04] transition-all duration-200 active:scale-95 text-white"
