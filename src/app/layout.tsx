@@ -19,23 +19,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Priyanshu Ojha | Full Stack Developer",
+  title: "Priyanshu Kumar | Full Stack Developer",
   description:
     "Full Stack Developer skilled in React, Next.js and Node.js. Explore my portfolio, projects, and achievements.",
   keywords:
-    "Priyanshu Ojha, Priyanshu Kumar, Full Stack Developer, Frontend Developer, Backend Developer, React Developer, Next.js, Node.js, Web Developer, Kanpur",
-  authors: [{ name: "Priyanshu Ojha" }],
+    "Priyanshu Kumar, Priyanshu Kumar, Full Stack Developer, Frontend Developer, Backend Developer, React Developer, Next.js, Node.js, Web Developer, Kanpur",
+  authors: [{ name: "Priyanshu Kumar" }],
   openGraph: {
-    title: "Priyanshu Ojha | Full Stack Developer",
+    title: "Priyanshu Kumar | Full Stack Developer",
     description:
       "Full Stack Developer skilled in React, Next.js and Node.js.",
     url: "https://www.priyanshuojha.in",
-    siteName: "Priyanshu Ojha Portfolio",
+    siteName: "Priyanshu Kumar Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Priyanshu Ojha | Full Stack Developer",
+    title: "Priyanshu Kumar | Full Stack Developer",
     description:
       "Full Stack Developer skilled in React, Next.js and Node.js.",
   },

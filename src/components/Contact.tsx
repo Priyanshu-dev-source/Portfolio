@@ -486,7 +486,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 border-t border-white/5">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()}{" "}
-            <span className="font-light">Priyanshu Ojha </span>
+            <span className="font-light">Priyanshu Kumar </span>
             All rights reserved.
           </p>
           {/* <p className="text-gray-500 text-xs">

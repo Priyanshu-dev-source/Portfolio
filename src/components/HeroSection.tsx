@@ -48,7 +48,7 @@ export default function HeroSection() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-900 text-2xl font-medium hover:text-[#ea5b25] transition-colors"
+              className="text-gray-900 dark:text-white text-2xl font-medium hover:text-[#ea5b25] transition-colors"
             >
               {link.label}
             </a>
@@ -56,7 +56,7 @@ export default function HeroSection() {
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="bg-[#ea5b25] text-white py-3 px-8 rounded-lg text-lg font-medium hover:opacity-90 transition-opacity"
+            className="bg-[#ea5b25] dark:text-white py-3 px-8 rounded-lg text-lg font-medium hover:opacity-90 transition-opacity"
           >
             Contact
           </a>
@@ -74,7 +74,7 @@ export default function HeroSection() {
               className="object-cover"
             />
           </div>
-          <span className={`font-medium text-base ${mobileMenuOpen ? "text-gray-900" : ""}`}>Priyanshu Ojha</span>
+          <span className={`font-medium text-base ${mobileMenuOpen ? "text-gray-900" : ""}`}>Priyanshu Kumar</span>
         </div>
 
         {/* Desktop Nav */}

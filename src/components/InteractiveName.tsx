@@ -57,7 +57,7 @@ export default function InteractiveName() {
           className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2 z-20 md:pl-8"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#111] leading-[1.1]">
-            Hello, I'm <span className="text-[#ea5b25]">Priyanshu Ojha</span>
+            Hello, I'm <span className="text-[#ea5b25] whitespace-nowrap">Priyanshu Kumar</span>
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl text-black font-light mt-2 md:mt-4 tracking-wide">
             Full Stack Developer
